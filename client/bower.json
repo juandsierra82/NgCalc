@@ -1,0 +1,18 @@
+{
+  "name": "client",
+  "homepage": "https://github.com/juandsierra82/NgCalc",
+  "authors": [
+    "juandsierra82 <juandsierra82@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
