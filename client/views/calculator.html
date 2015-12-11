@@ -5,7 +5,7 @@
 		<label ng-repeat="number in keyboard.numbers" for="{{keyboard.numbers}}">
 			<input type="button" id="{{number}}" ng-value="number" ng-click="concat(number)">
 		</label>
-		<input type="button" id="{{keyboard.decimal}}" ng-value="keyboard.decimal">
+<!-- 		<input type="button" id="{{keyboard.decimal}}" ng-value="keyboard.decimal" ng-if> -->
 	</div>
 	<div id="operations">
 		<label ng-repeat="operation in keyboard.operations track by $index" for="{{keyboard.operations}}">
