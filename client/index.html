@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+              <!-- libraries -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/underscore/underscore-min.js"></script>
+  <!--- I debated keeping all the controller js in the app file, but decided to keep it modular to make for a cleaner code -->
+
+    <script src="js/app.js"></script>
+    <script src="js/CalcControllers.js"></script>
+    <script src="js/Calculator.js"></script>
+  <!--     //app -->
+  </head> 
+  <body ng-app="calculator">
+  	<main>
+      <div ui-view>
+      </div>
+    </main>
+  </body>
+</html>
