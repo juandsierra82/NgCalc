@@ -1,3 +1,16 @@
-<div>
+<div id="calculator">
 	Hello Calc world!
+	<div id="display">{{displayed}}</div>
+	<div id="keypad">
+		<label ng-repeat="number in keyboard.numbers" for="{{keyboard.numbers}}">
+			<input type="button" id="{{number}}" ng-value="number" ng-click="concat(number)">
+		</label>
+		<input type="button" id="{{keyboard.decimal}}" ng-value="keyboard.decimal">
+	</div>
+	<div id="operations">
+		<label ng-repeat="operation in keyboard.operations track by $index" for="{{keyboard.operations}}">
+			<input type="button" id="{{operation}}" ng-value="operation">
+		</label>
+	</div>
+	<pre>{{result}}</pre>
 </div>
