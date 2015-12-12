@@ -15,7 +15,7 @@ angular.module('calculator.controller', ['calculator.services'])
 //keyboard object
 	$scope.keyboard = {
 		numbers: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.'],
-		operations: ['+', '-', '/', '*', '+/-', '=', 'CE']
+		operations: ['+', '-', '/', '*', '=', 'CE']
 	}
 //app functions
 //display
@@ -42,26 +42,18 @@ angular.module('calculator.controller', ['calculator.services'])
 
 			if($scope.operation.pending === '+'){
 				$scope.result.memory = Ops.add($scope.result.memory, parseFloat($scope.result.current));
-				$scope.operation.pending = value;
-				$scope.result.current = Ops.clear();
 			}
 			
 			if($scope.operation.pending === '-'){
 				$scope.result.memory = Ops.minus($scope.result.memory, parseFloat($scope.result.current));
-				$scope.operation.pending = value;
-				$scope.result.current = Ops.clear();
 			}
 		
 			if($scope.operation.pending === '*'){
 				$scope.result.memory = Ops.multiply($scope.result.memory, parseFloat($scope.result.current));
-				$scope.operation.pending = value;
-				$scope.result.current = Ops.clear();
 			}
 
 			if($scope.operation.pending === '/'){
 				$scope.result.memory = Ops.divide($scope.result.memory, parseFloat($scope.result.current));
-				$scope.operation.pending = value;
-				$scope.result.current = Ops.clear();
 			}
 
 			$scope.result.memory = Display.round($scope.result.memory);
@@ -69,16 +61,19 @@ angular.module('calculator.controller', ['calculator.services'])
 			if(value === 'CE'){
 				$scope.result.memory = null;
 				$scope.result.total = Ops.clear();
-				$scope.result.current = Ops.clear();
+				return ;
 			}
 
+			if(value === '='){
+
+				return ;
+			}
+
+			$scope.operation.pending = value;
+			$scope.result.current = Ops.clear();
 		}	
 
 	}
 
-
-		// if(value === '*'){
-		// 	$scope.result.memory = Ops.multiply($scope.result.memory, $scope.result.current)
-		// }
 
 })
