@@ -8,11 +8,11 @@ angular.module('calculator.services', [])
 function Ops (){
 		
 		function add(a, b){
-			return a+b;
+			return a+ b;
 		}
 
 		function minus(a, b){
-			return a-b;
+			return a - b;
 		}
 
 		function multiply(a, b){
@@ -20,7 +20,7 @@ function Ops (){
 		}
 
 		function divide(a, b){
-			if(b === '0') return 'NaN';
+			if(b === 0) return 'NaN';
 			return a/b;
 		}
 
@@ -28,8 +28,8 @@ function Ops (){
 			return -a;
 		}
 
-		function clear(str){
-			return '0';
+		function clear(){
+			return '';
 		}
 
 	return {
@@ -37,21 +37,27 @@ function Ops (){
 		minus: minus,
 		multiply: multiply,
 		divide: divide,
-		negate: negate
+		negate: negate,
+		clear: clear,
 	}
 }
 
 function Display (){
 		
-	function round(str){
-		if(str.indexOf('.') === -1)
-			return str;
+	// function round(str){
+	// 	if(str.indexOf('.') === -1)
+	// 		return str;
 
-		var rounded = ''; 
-		var strArr = str.split('.');
-		rounded =+ str[0] + strArr[1].slice(0, 5);
-		return rounded;
-		}
+	// 	var rounded = ''; 
+	// 	var strArr = str.split('.');
+	// 	rounded =+ str[0] + strArr[1].slice(0, 5);
+	// 	return rounded;
+	// 	}
+
+	function round(float){
+		console.log('in display')
+		return Math.round(float *10000)/10000;
+	}
 
 	function backspace(str){
 		return str.substring(0, str.length-1);
@@ -62,4 +68,6 @@ function Display (){
 		round: round,
 		backspace: backspace
 	}
+
+
 }
