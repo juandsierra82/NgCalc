@@ -44,23 +44,16 @@ function Ops (){
 
 function Display (){
 		
-	// function round(str){
-	// 	if(str.indexOf('.') === -1)
-	// 		return str;
-
-	// 	var rounded = ''; 
-	// 	var strArr = str.split('.');
-	// 	rounded =+ str[0] + strArr[1].slice(0, 5);
-	// 	return rounded;
-	// 	}
 
 	function round(float){
 		console.log('in display')
 		return Math.round(float *10000)/10000;
 	}
-
+//added in backspace functionality
 	function backspace(str){
-		return str.substring(0, str.length-1);
+		//prevents NaN input
+		if(str === '0') return '0';
+		return str.substring(0, str.length-1);;
 	}
 
 	return {

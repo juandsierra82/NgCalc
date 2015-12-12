@@ -6,7 +6,7 @@
 	</div>
 	<div id="keypad">
 		<label ng-repeat="number in keyboard.numbers" for="{{keyboard.numbers}}">
-			<input type="button" id="{{number}}" ng-value="number" ng-click="concat(number)">
+			<md-button class="md-raised md-primary" id="{{number}}" ng-value="number" ng-click="concat(number)">{{number}}</md-button>
 		</label>
 <!-- 		<input type="button" id="{{keyboard.decimal}}" ng-value="keyboard.decimal" ng-if> -->
 	</div>
