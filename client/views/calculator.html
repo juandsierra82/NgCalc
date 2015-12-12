@@ -1,6 +1,9 @@
 <div id="calculator">
 	Hello Calc world!
-	<div id="display">{{result.memory}}</div>
+	<div id="display">
+		<div id="total">{{result.memory}}</div>
+		<div id="input">{{operation.pending}} {{result.current}}</div>
+	</div>
 	<div id="keypad">
 		<label ng-repeat="number in keyboard.numbers" for="{{keyboard.numbers}}">
 			<input type="button" id="{{number}}" ng-value="number" ng-click="concat(number)">
