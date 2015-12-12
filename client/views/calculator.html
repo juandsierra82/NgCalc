@@ -1,20 +1,25 @@
 <div id="calculator">
 	Hello Calc world!
-	<div id="display">
-		<div id="total">{{result.memory}}</div>
-		<div id="input">{{operation.pending}} {{result.current}}</div>
+	<md-card style="width: 320px;">
+	<div id="display" style="height: 100px; text-align: right;">
+		<div id="total" class="md-display-1">{{result.memory}}</div>
+		<div id="input" class="md-headline">{{operation.pending}} {{result.current}}</div>
 	</div>
-	<div id="keypad">
+	<div id="interface" layout-xs="column" style="width: 420px;">
+	<div id="keypad" flex>
 		<label ng-repeat="number in keyboard.numbers" for="{{keyboard.numbers}}">
-			<md-button class="md-raised md-primary" id="{{number}}" ng-value="number" ng-click="concat(number)">{{number}}</md-button>
+<!-- 			<md-card-actions>
+ -->			<md-button class="md-primary md-raised" id="{{number}}" ng-value="number" ng-click="concat(number)">{{number}}</md-button>
+<!-- 		  </md-card-actions> -->
 		</label>
-<!-- 		<input type="button" id="{{keyboard.decimal}}" ng-value="keyboard.decimal" ng-if> -->
 	</div>
-	<div id="operations">
+	<div id="operations" flex>
 		<label ng-repeat="operation in keyboard.operations track by $index" for="{{keyboard.operations}}">
-			<input type="button" id="{{operation}}" ng-value="operation" ng-click="do(operation)">
+			<md-button class="md-raised md-accent" id="{{operation}}" ng-value="operation" ng-click="do(operation)">{{operation}}</md-button>
 		</label>
 	</div>
+</div>
+</md-card>
 	<pre>{{result}}</pre>
 	<pre>{{operation}}</pre>
 	<pre>{{result.memory}} {{operation.pending}} {{result.current}} = {{result.memory}}</pre>
