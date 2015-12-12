@@ -29,7 +29,7 @@ function Ops (){
 		}
 
 		function clear(){
-			return '';
+			return '0';
 		}
 
 	return {

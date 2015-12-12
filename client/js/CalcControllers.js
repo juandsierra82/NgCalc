@@ -5,7 +5,7 @@ angular.module('calculator.controller', ['calculator.services'])
 //calculator variables
 	$scope.result = {};
 	$scope.result.memory = null;
-	$scope.result.current = "0";
+	$scope.result.current = ""
 	$scope.result.total = "0"
 
 	$scope.operation = {}
