@@ -1,4 +1,4 @@
-angular.module('calculator.services', [])
+angular.module('calculator.factories', [])
 
 .factory('Ops', Ops)
 

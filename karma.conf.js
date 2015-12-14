@@ -15,10 +15,17 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-    'bower_components/angular/angular.js',
-    'bower_components/angular-mocks/angular-mocks.js',
-    'js/app.js',
-    'tests/*.js'
+    'client/bower_components/jquery/dist/jquery.min.js',
+    'client/bower_components/angular/angular.js',
+    'client/bower_components/angular-route/angular-route.min.js',
+    'client/bower_components/angular-ui-router/release/angular-ui-router.min.js',
+    'client/bower_components/angular-mocks/angular-mocks.js',
+    'client/bower_components/angular-aria/angular-aria.js',
+    'client/bower_components/angular-animate/angular-animate.js',
+    'client/bower_components/angular-material/angular-material.js',
+
+    'client/js/*.js',
+    'client/tests/*.js'
     ],
 
 
@@ -36,8 +43,14 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['progress', 'html'],
 
+    // jasmineRunnerReporter: {
+    //   outputFile: 'jasmine-runner.html',
+    //   includes: [
+    //     "node_modules/jasmine-expect/dist/jasmine-matchers.js"
+    //   ]
+    // },
 
     // web server port
     port: 9876,
@@ -60,6 +73,11 @@ module.exports = function(config) {
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['Chrome'],
 
+    htmlReporter: {
+      outputFile: 'tests/units.html',
+      pageTitle: 'Unit Tests',
+      subPageTitle: 'A sample project description'
+    },
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits

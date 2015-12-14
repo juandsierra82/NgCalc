@@ -1,4 +1,4 @@
-angular.module('calculator.controller', ['calculator.services'])
+angular.module('calculator.controller', ['calculator.factories'])
 
 .controller('Rendering', function ($scope, Ops, Display){
 
@@ -83,3 +83,5 @@ angular.module('calculator.controller', ['calculator.services'])
 
 
 })
+
+
