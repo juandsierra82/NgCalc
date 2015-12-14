@@ -19,7 +19,7 @@ After bower and npm install---
 
 App may be served dynamically via localhost:8000 by running:
 
-$nodemon index.js from the command line.
+$nodemon index.js from the command line from the root directory.
 
 
 
