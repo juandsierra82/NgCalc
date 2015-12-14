@@ -37,7 +37,7 @@ clicking '<=': allows editing of the calculator input like backspace button dele
 
 '=' repeats the prior operation before the last input.
 
-//Testing
+##Testing
 
 For testing run: 
 

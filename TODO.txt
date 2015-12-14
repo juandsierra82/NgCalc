@@ -1,0 +1,17 @@
+-set up angular environment (not necessarily served): index and calculator view
+-set up static calculator input and css:
+-set up digital pad (user should also be able to type in numbers?)
+-set up factories to handle operations and input
+-set up service to integrate factories
+(Bonus: write up a custom directive?)
+
+-set up testing
+-testing for each function
+-testing for calculator as a whole
+
+-set up grunt
+
+-maybe serve up page to run grunt or serve up the tests
+
+-refactor code and comment 
+
