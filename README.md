@@ -3,7 +3,7 @@ NgCalc
 
 A simple angular calculator with unit testing for factories and controllers.
 
-//Configuration
+##Configuration
 
 $ npm install:
 -karma/jasmine
@@ -27,7 +27,7 @@ There is also a small sticky footer and holy-grail css flex box set up accessibl
 
 http://localhost:8000/cssBoxing.html
 
-//Controls
+##Controls
 
 Calculator instructions:
 
