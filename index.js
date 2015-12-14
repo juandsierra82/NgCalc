@@ -13,6 +13,7 @@ app.use(morgan('dev'));
 
 app.use('/', express.static(__dirname + '/client'));
 
+
 app.listen(port);
 
 console.log('Server is listening in port', port)
