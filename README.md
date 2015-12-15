@@ -8,6 +8,11 @@ https://polar-temple-4636.herokuapp.com/#/
 
 A simple angular calculator with unit testing for factories and controllers.
 
+Calculator: https://polar-temple-4636.herokuapp.com/#/
+
+CSS Sticky Footer/Holy Grail Flex box:
+https://polar-temple-4636.herokuapp.com/cssBoxing.html
+
 ##Configuration
 
 $ npm install:
